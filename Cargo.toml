@@ -1,0 +1,12 @@
+[package]
+name = "character_arc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+itertools = "0.12.1"
+petgraph = "^0.6.4"
+strum = "0.26.1"
+good_lp = { version = "^1.7.0", features = ["highs"], default-features = false }
+ndarray = "0.15.6"
+layout-rs = "0.1.2"
