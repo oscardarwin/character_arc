@@ -43,12 +43,13 @@ pub struct StoryEntityState(StoryEntity, State);
 
 #[derive(Clone, Debug)]
 pub struct Scene {
+    pub name: String,
     pub story_entities: Vec<StoryEntityState>,
 }
 
 impl fmt::Display for Scene {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "scene_info")
+        write!(f, "{}", self.name)
     }
 }
 
