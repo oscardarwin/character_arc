@@ -4,21 +4,18 @@ use model::{ChangeKey, SceneGraph};
 use petgraph::dot::Dot;
 use std::error::Error;
 
-// mod example_game;
-mod mip_story_builder;
+#[macro_use]
+mod macros;
 mod model;
+mod rl_story_builder;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let num_scenes = 6;
     let num_outcomes = 3;
 
-    let scene_graph = mip_story_builder::build(
-        vec![ChangeKey("d1".to_string()), ChangeKey("d2".to_string())],
-        num_scenes,
-        num_outcomes,
-    )?;
+    rl_story_builder::build();
 
-    visualise_scene_graph(&scene_graph)?;
+    //visualise_scene_graph(&scene_graph)?;
 
     Ok(())
 }

@@ -16,10 +16,15 @@
             stdenv
             clang
             libclang
+            pkg-config
+            openssl
             rustc
             cargo
             rustfmt
             gdb
+            # openblas
+            # blas
+            gsl
           ];
           shellHook = ''
             export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib/
